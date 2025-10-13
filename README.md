@@ -1,6 +1,6 @@
 # Multiplex Plugin
 
-The multiplex plugin allows your audience to view the slides of the reveal.js presentation you are controlling on their own phone, tablet or laptop. As the master presentation navigates the slides, all client presentations will update in real time. See a demo at <https://reveal-multiplex.glitch.me/>).
+The multiplex plugin allows your audience to view the slides of the reveal.js presentation you are controlling on their own phone, tablet or laptop. As the master presentation navigates the slides, all client presentations will update in real time. See a demo at <https://multiplex.up.railway.app/>).
 
 The multiplex plugin needs the following three things to operate:
 
@@ -17,7 +17,7 @@ The multiplex plugin needs the following three things to operate:
 
 ### Hosted Server
 
-In the following examples we configure the multiplex plugin to connect to a socket.io server hosted at <https://reveal-multiplex.glitch.me/>. You are very welcome to point your presentations at this socket.io server, but availability and stability are not guaranteed. **For anything mission critical we recommend running your own multiplex server**.
+In the following examples we configure the multiplex plugin to connect to a socket.io server hosted at <https://multiplex.up.railway.app/>. You are very welcome to point your presentations at this socket.io server, but availability and stability are not guaranteed. **For anything mission critical we recommend running your own multiplex server**.
 
 ## Master Presentation
 
@@ -38,13 +38,13 @@ Reveal.initialize({
     // Example values. To generate your own, see the socket.io server instructions.
     secret: '13652805320794272084', // Obtained from the socket.io server. Gives this (the master) control of the presentation
     id: '1ea875674b17ca76', // Obtained from socket.io server
-    url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+    url: 'https://multiplex.up.railway.app/' // Location of socket.io server
   },
 
   // Don't forget to add the dependencies
   dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+    { src: 'https://multiplex.up.railway.app/socket.io/socket.io.js', async: true },
+    { src: 'https://multiplex.up.railway.app/master.js', async: true },
 
     // and if you want speaker notes
     { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
@@ -64,13 +64,13 @@ Reveal.initialize({
     // Example values. To generate your own, see the socket.io server instructions.
     secret: null, // null so the clients do not have control of the master presentation
     id: '1ea875674b17ca76', // id, obtained from socket.io server
-    url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+    url: 'https://multiplex.up.railway.app/' // Location of socket.io server
   },
 
   // Don't forget to add the dependencies
   dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+    { src: 'https://multiplex.up.railway.app/socket.io/socket.io.js', async: true },
+    { src: 'https://multiplex.up.railway.app/client.js', async: true }
   ]
 });
 ```
@@ -79,13 +79,13 @@ Reveal.initialize({
 
 Server that receives the `slideChanged` events from the master presentation and broadcasts them out to the connected client presentations. This needs to be publicly accessible. You can run your own socket.io server with `node node_modules/reveal-multiplex`.
 
-Or you can use the socket.io server at <https://reveal-multiplex.glitch.me/>.
+Or you can use the socket.io server at <https://multiplex.up.railway.app/>.
 
-You'll need to generate a unique secret and token pair for your master and client presentations. To do so, visit `https://example.com/token`, where `https://example.com` is the location of your socket.io server. Or if you're going to use the socket.io server at <https://reveal-multiplex.glitch.me/>, visit [https://reveal-multiplex.glitch.me/token](https://reveal-multiplex.glitch.me/token).
+You'll need to generate a unique secret and token pair for your master and client presentations. To do so, visit `https://example.com/token`, where `https://example.com` is the location of your socket.io server. Or if you're going to use the socket.io server at <https://multiplex.up.railway.app/>, visit [https://multiplex.up.railway.app/token](https://multiplex.up.railway.app/token).
 
 ### socket.io server as file static server
 
-The socket.io server can play the role of static file server for your client presentation, as in the example at <https://reveal-multiplex.glitch.me/>. (Open <https://reveal-multiplex.glitch.me/> in two browsers. Navigate through the slides on one, and the other will update to match.)
+The socket.io server can play the role of static file server for your client presentation, as in the example at <https://multiplex.up.railway.app/>. (Open <https://multiplex.up.railway.app/> in two browsers. Navigate through the slides on one, and the other will update to match.)
 
 Example configuration:
 
@@ -100,12 +100,12 @@ Reveal.initialize({
 
   // Don't forget to add the dependencies
   dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+    { src: 'https://multiplex.up.railway.app/socket.io/socket.io.js', async: true },
+    { src: 'https://multiplex.up.railway.app/client.js', async: true }
   ]
 ```
 
-It can also play the role of static file server for your master presentation and client presentations at the same time (as long as you don't want to use speaker notes). (Open <https://reveal-multiplex.glitch.me/> in two browsers. Navigate through the slides on one, and the other will update to match. Navigate through the slides on the second, and the first will update to match.) This is probably not desirable, because you don't want your audience to mess with your slides while you're presenting. ;)
+It can also play the role of static file server for your master presentation and client presentations at the same time (as long as you don't want to use speaker notes). (Open <https://multiplex.up.railway.app/> in two browsers. Navigate through the slides on one, and the other will update to match. Navigate through the slides on the second, and the first will update to match.) This is probably not desirable, because you don't want your audience to mess with your slides while you're presenting. ;)
 
 Example configuration:
 
@@ -120,9 +120,9 @@ Reveal.initialize({
 
   // Don't forget to add the dependencies
   dependencies: [
-    { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+    { src: 'https://multiplex.up.railway.app/socket.io/socket.io.js', async: true },
+    { src: 'https://multiplex.up.railway.app/master.js', async: true },
+    { src: 'https://multiplex.up.railway.app/client.js', async: true }
   ]
 });
 ```
