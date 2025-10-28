@@ -53,7 +53,7 @@ Reveal.initialize({
   // Don't forget to add the dependencies
   dependencies: [
     { src: 'http://localhost:1948/socket.io/socket.io.js', async: true },
-    { src: 'http://localhost:1948/node_modules/reveal-multiplex-school/master.js', async: true }
+    { src: 'http://localhost:1948/node_modules/reveal-multiplex-school/teacher.js', async: true }
   ]
 });
 ```
@@ -76,7 +76,7 @@ Reveal.initialize({
   // Don't forget to add the dependencies
   dependencies: [
     { src: 'http://localhost:1948/socket.io/socket.io.js', async: true },
-    { src: 'http://localhost:1948/node_modules/reveal-multiplex-school/client.js', async: true }
+    { src: 'http://localhost:1948/node_modules/reveal-multiplex-school/student.js', async: true }
   ]
 });
 ```
