@@ -1,19 +1,33 @@
 {
-  "name": "reveal-multiplex",
+  "name": "reveal-multiplex-school",
   "version": "0.1.0",
-  "description": "reveal.js multiplex plugin",
+  "description": "reveal.js multiplex plugin updated for school courses",
+  "keywords": [
+    "reveal",
+    "multiplex",
+    "school"
+  ],
   "homepage": "https://revealjs.com",
+  "bugs": {
+    "url": "https://github.com/VictorGaspar/multiplex_school/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorGaspar/multiplex_school.git"
+  },
+  "license": "MIT",
+  "author": "Victor Gaspar",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "~4.17.1",
-    "mustache": "~4.0.0",
     "socket.io": "^2.5.0"
   },
-  "license": "MIT"
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

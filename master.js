@@ -27,10 +27,6 @@
 	Reveal.on( 'slidechanged', post );
 	Reveal.on( 'fragmentshown', post );
 	Reveal.on( 'fragmenthidden', post );
-	Reveal.on( 'overviewhidden', post );
-	Reveal.on( 'overviewshown', post );
-	Reveal.on( 'paused', post );
-	Reveal.on( 'resumed', post );
 	document.addEventListener( 'send', post ); // broadcast custom events sent by other plugins
 
 }());
